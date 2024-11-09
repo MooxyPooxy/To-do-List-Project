@@ -10,7 +10,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    dueDate: DataTypes.DATE
+    dueDate: DataTypes.DATE,
+    priority: {
+      type: DataTypes.ENUM('low', 'medium', 'high'),
+      defaultValue: 'medium'
+    }
   }, {});
   Task.associate = function(models) {
     // associations can be defined here if needed

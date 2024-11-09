@@ -23,6 +23,10 @@ module.exports = {
       dueDate: {
         type: Sequelize.DATE
       },
+      priority: {
+        type: Sequelize.ENUM('low', 'medium', 'high'),
+        defaultValue: 'medium'
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
